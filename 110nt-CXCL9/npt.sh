@@ -3,7 +3,9 @@
 #SBATCH --mem=50G
 #SBATCH --cpus-per-task=8
 #SBATCH --time=8:00:00
-#SBATCH --job-name=nvt_run
+#SBATCH --gres=gpu:1
+#SBATCH --reservation=mkoziarski_gpu
+#SBATCH --job-name=npt_run
 #SBATCH --out=%x-%j.out
 
 
@@ -12,9 +14,13 @@ echo "Job started on $(date)"
 echo "--------------------"
 
 
-module load gromacs/2024.4
+# module load gromacs/2024.4
 
-gmx grompp -f npt.mdp -c nvt.gro -t nvt.cpt -r nvt.gro -p topol.top -n prot_dna_index.ndx -o npt.tpr
+source $HOME/.bashrc
+
+conda activate gromacs
+
+# gmx grompp -f npt.mdp -c nvt.gro -t nvt.cpt -r nvt.gro -p topol.top -n prot_dna_index.ndx -o npt.tpr
 
 gmx mdrun -v -deffnm npt
 

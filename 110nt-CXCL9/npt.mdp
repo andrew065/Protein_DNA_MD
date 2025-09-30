@@ -17,7 +17,7 @@ lincs_order             = 4         ; also related to accuracy
 ; Neighbor searching and vdW
 cutoff-scheme           = Verlet
 ns_type                 = grid      ; search neighboring grid cells
-nstlist                 = 20        ; largely irrelevant with Verlet
+nstlist                 = 60        ; largely irrelevant with Verlet
 rlist                   = 1.2
 vdwtype                 = cutoff
 vdw-modifier            = force-switch
@@ -34,7 +34,7 @@ tc-grps                 = Protein_DNA Water_and_ions    ; two coupling groups - 
 tau_t                   = 0.1   0.1                     ; time constant, in ps
 ref_t                   = 300   300                     ; reference temperature, one for each group, in K
 ; Pressure coupling
-pcoupl                  = Berendsen                     ; pressure coupling is on for NPT
+pcoupl                  = C-rescale                     ; pressure coupling is on for NPT
 pcoupltype              = isotropic                     ; uniform scaling of box vectors
 tau_p                   = 2.0                           ; time constant, in ps
 ref_p                   = 1.0                           ; reference pressure, in bar

@@ -1,31 +1,31 @@
 ;
 ;	File 'mdout.mdp' was generated
-;	By user: tanm27 (3140538)
-;	On host: l1.nibi.sharcnet
-;	At date: Sun Sep 28 22:44:49 2025
+;	By user: unknown (2807)
+;	On host: cn524.ccm.sickkids.ca
+;	At date: Mon Sep 29 23:09:45 2025
 ;
 ;	Created by:
-;	             :-) GROMACS - gmx grompp, 2024.4-EasyBuild_4.9.4 (-:
+;	               :-) GROMACS - gmx grompp, 2025.3-conda_forge (-:
 ;	
-;	Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
-;	Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
-;	Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+;	Executable:   /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs/bin.AVX2_256/gmx
+;	Data prefix:  /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs
+;	Working dir:  /hpf/projects/mkoziarski/alian/igem/Protein_DNA_MD/110nt-CXCL9
 ;	Command line:
-;	  gmx grompp -f npt.mdp -c nvt.gro -t nvt.cpt -r nvt.gro -p topol.top -n prot_dna_index.ndx -o npt.tpr
+;	  gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -n prot_dna_index.ndx -o md_1_20ns.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
 ; e.g.: -I/home/joe/doe -I/home/mary/roe
 include                  = 
 ; e.g.: -DPOSRES -DFLEXIBLE (note these variable names are case sensitive)
-define                   = -DPOSRES_PROT -DPOSRES_DNA
+define                   = 
 
 ; RUN CONTROL PARAMETERS
 integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 50000
+nsteps                   = 10000000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
@@ -67,11 +67,11 @@ nstxout                  = 0
 nstvout                  = 0
 nstfout                  = 0
 ; Output frequency for energies to log file and energy file
-nstlog                   = 500
+nstlog                   = 5000
 nstcalcenergy            = 100
-nstenergy                = 500
+nstenergy                = 5000
 ; Output frequency and precision for .xtc file
-nstxout-compressed       = 500
+nstxout-compressed       = 5000
 compressed-x-precision   = 1000
 ; This selects the subset of atoms for the compressed
 ; trajectory file. You can select multiple groups. By
@@ -84,7 +84,7 @@ energygrps               =
 ; cut-off scheme (Verlet: particle based cut-offs)
 cutoff-scheme            = Verlet
 ; nblist update frequency
-nstlist                  = 20
+nstlist                  = 100
 ; Periodic boundary conditions: xyz, no, xy
 pbc                      = xyz
 periodic-molecules       = no
@@ -147,7 +147,7 @@ tc-grps                  = Protein_DNA Water_and_ions
 tau_t                    = 0.1   0.1
 ref_t                    = 300   300
 ; pressure coupling     
-pcoupl                   = Berendsen
+pcoupl                   = Parrinello-Rahman
 pcoupltype               = isotropic
 nstpcouple               = -1
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
@@ -155,7 +155,7 @@ tau_p                    = 2.0
 compressibility          = 4.5e-5
 ref_p                    = 1.0
 ; Scaling of reference coordinates, No, All or COM
-refcoord_scaling         = com
+refcoord-scaling         = No
 
 ; OPTIONS FOR QMMM calculations
 QMMM                     = no
@@ -175,7 +175,7 @@ annealing-temp           =
 ; GENERATE VELOCITIES FOR STARTUP RUN
 gen_vel                  = no
 gen-temp                 = 300
-gen-seed                 = -2695689
+gen-seed                 = -729809029
 
 ; OPTIONS FOR BONDS    
 constraints              = h-bonds
@@ -264,6 +264,8 @@ restraint-lambdas        =
 temperature-lambdas      = 
 calc-lambda-neighbors    = 1
 init-lambda-weights      = 
+init-lambda-counts       = 
+init-wl-histogram-counts = 
 dhdl-print-energy        = no
 sc-function              = beutler
 sc-alpha                 = 0
@@ -327,3 +329,6 @@ qmmm-cp2k-active         = false
 
 ; Colvars bias
 colvars-active           = false
+
+; Neural Network potential
+nnpot-active             = false

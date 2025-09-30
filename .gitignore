@@ -2,4 +2,12 @@
 **/charmm*
 **/backup*
 104nt-CXCL9_old/
-
+**/*.log
+**/*.gro
+**/*.xtc
+**/*.tpr
+**/*.edr
+**/*.trr
+**/*.ndx
+**/*.cpt
+**/*.xvg

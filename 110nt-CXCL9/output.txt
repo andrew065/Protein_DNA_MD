@@ -1152,3 +1152,244 @@ GROMACS reminds you: "What's Your Definition Of Dirty ?" (G. Michael)
 
 (vscode) [tanm27@c170.nibi 110nt-CXCL9]$ sbatch nvt.sh 
 Submitted batch job 2268956
+
+######################################################
+          Production MD and post Processing
+######################################################
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ sbatch md.sh 
+
+-------------------------------------------------------
+(gromacs) [alian@cn523 110nt-CXCL9]$ gmx trjconv -s md_1_20ns.tpr -f md_1_20ns.xtc  -o md_1_20ns_nojump.xtc -pbc nojump
+               :-) GROMACS - gmx trjconv, 2025.3-conda_forge (-:
+
+Executable:   /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs/bin.AVX2_256/gmx
+Data prefix:  /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs
+Working dir:  /hpf/projects/mkoziarski/alian/igem/Protein_DNA_MD/110nt-CXCL9
+Command line:
+  gmx trjconv -s md_1_20ns.tpr -f md_1_20ns.xtc -o md_1_20ns_nojump.xtc -pbc nojump
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file md_1_20ns.tpr, VERSION 2025.3-conda_forge (single precision)
+Reading file md_1_20ns.tpr, VERSION 2025.3-conda_forge (single precision)
+Select group for output
+Group     0 (         System) has 685823 elements
+Group     1 (        Protein) has  2077 elements
+Group     2 (      Protein-H) has   981 elements
+Group     3 (        C-alpha) has   125 elements
+Group     4 (       Backbone) has   375 elements
+Group     5 (      MainChain) has   499 elements
+Group     6 (   MainChain+Cb) has   616 elements
+Group     7 (    MainChain+H) has   622 elements
+Group     8 (      SideChain) has  1455 elements
+Group     9 (    SideChain-H) has   482 elements
+Group    10 (    Prot-Masses) has  2077 elements
+Group    11 (    non-Protein) has 683746 elements
+Group    12 (            DNA) has  3501 elements
+Group    13 (             NA) has    88 elements
+Group    14 (          Water) has 680157 elements
+Group    15 (            SOL) has 680157 elements
+Group    16 (      non-Water) has  5666 elements
+Group    17 (            Ion) has    88 elements
+Group    18 ( Water_and_ions) has 680245 elements
+Select a group: 0
+Selected 0: 'System'
+Reading frame       0 time    0.000   
+Precision of md_1_20ns.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Last frame       2000 time 20000.000    ->  frame   1999 time 19990.000      
+ ->  frame   2000 time 20000.000      
+Last written: frame   2000 time 20000.000
+
+
+GROMACS reminds you: "The last good thing written in C was Franz Schubert's Symphony Number 9." (Erwin Dieterich)
+
+(gromacs) [alian@cn523 110nt-CXCL9]$ gmx trjconv -s md_1_20ns.tpr -f md_1_20ns_nojump.xtc \
+>             -o md_1_20ns_center.xtc -center -pbc mol -ur compact \
+>             -n prot_dna_index.ndx
+               :-) GROMACS - gmx trjconv, 2025.3-conda_forge (-:
+
+Executable:   /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs/bin.AVX2_256/gmx
+Data prefix:  /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs
+Working dir:  /hpf/projects/mkoziarski/alian/igem/Protein_DNA_MD/110nt-CXCL9
+Command line:
+  gmx trjconv -s md_1_20ns.tpr -f md_1_20ns_nojump.xtc -o md_1_20ns_center.xtc -center -pbc mol -ur compact -n prot_dna_index.ndx
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file md_1_20ns.tpr, VERSION 2025.3-conda_forge (single precision)
+Reading file md_1_20ns.tpr, VERSION 2025.3-conda_forge (single precision)
+Select group for centering
+Group     0 (         System) has 685823 elements
+Group     1 (        Protein) has  2077 elements
+Group     2 (      Protein-H) has   981 elements
+Group     3 (        C-alpha) has   125 elements
+Group     4 (       Backbone) has   375 elements
+Group     5 (      MainChain) has   499 elements
+Group     6 (   MainChain+Cb) has   616 elements
+Group     7 (    MainChain+H) has   622 elements
+Group     8 (      SideChain) has  1455 elements
+Group     9 (    SideChain-H) has   482 elements
+Group    10 (    Prot-Masses) has  2077 elements
+Group    11 (    non-Protein) has 683746 elements
+Group    12 (            DNA) has  3501 elements
+Group    13 (             NA) has    88 elements
+Group    14 (          Water) has 680157 elements
+Group    15 (            SOL) has 680157 elements
+Group    16 (      non-Water) has  5666 elements
+Group    17 (            Ion) has    88 elements
+Group    18 ( Water_and_ions) has 680245 elements
+Group    19 (    Protein_DNA) has  5578 elements
+Select a group: 19
+Selected 19: 'Protein_DNA'
+Select group for output
+Group     0 (         System) has 685823 elements
+Group     1 (        Protein) has  2077 elements
+Group     2 (      Protein-H) has   981 elements
+Group     3 (        C-alpha) has   125 elements
+Group     4 (       Backbone) has   375 elements
+Group     5 (      MainChain) has   499 elements
+Group     6 (   MainChain+Cb) has   616 elements
+Group     7 (    MainChain+H) has   622 elements
+Group     8 (      SideChain) has  1455 elements
+Group     9 (    SideChain-H) has   482 elements
+Group    10 (    Prot-Masses) has  2077 elements
+Group    11 (    non-Protein) has 683746 elements
+Group    12 (            DNA) has  3501 elements
+Group    13 (             NA) has    88 elements
+Group    14 (          Water) has 680157 elements
+Group    15 (            SOL) has 680157 elements
+Group    16 (      non-Water) has  5666 elements
+Group    17 (            Ion) has    88 elements
+Group    18 ( Water_and_ions) has 680245 elements
+Group    19 (    Protein_DNA) has  5578 elements
+Select a group: 0
+Selected 0: 'System'
+Reading frame       0 time    0.000   
+Precision of md_1_20ns_nojump.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Last frame       2000 time 20000.000    ->  frame   1999 time 19990.000      
+ ->  frame   2000 time 20000.000      
+Last written: frame   2000 time 20000.000
+
+
+GROMACS reminds you: "Come and play on the hospital roof, I got something that's yours" (Sherlock)
+
+(gromacs) [alian@cn523 110nt-CXCL9]$ gmx trjconv -s md_1_20ns.tpr -f md_1_20ns_center.xtc \
+>             -o md_1_20ns_fit.xtc -fit rot+trans -n prot_dna_index.ndx
+               :-) GROMACS - gmx trjconv, 2025.3-conda_forge (-:
+
+Executable:   /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs/bin.AVX2_256/gmx
+Data prefix:  /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs
+Working dir:  /hpf/projects/mkoziarski/alian/igem/Protein_DNA_MD/110nt-CXCL9
+Command line:
+  gmx trjconv -s md_1_20ns.tpr -f md_1_20ns_center.xtc -o md_1_20ns_fit.xtc -fit rot+trans -n prot_dna_index.ndx
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Will write xtc: Compressed trajectory (portable xdr format): xtc
+Reading file md_1_20ns.tpr, VERSION 2025.3-conda_forge (single precision)
+Reading file md_1_20ns.tpr, VERSION 2025.3-conda_forge (single precision)
+Select group for least squares fit
+Group     0 (         System) has 685823 elements
+Group     1 (        Protein) has  2077 elements
+Group     2 (      Protein-H) has   981 elements
+Group     3 (        C-alpha) has   125 elements
+Group     4 (       Backbone) has   375 elements
+Group     5 (      MainChain) has   499 elements
+Group     6 (   MainChain+Cb) has   616 elements
+Group     7 (    MainChain+H) has   622 elements
+Group     8 (      SideChain) has  1455 elements
+Group     9 (    SideChain-H) has   482 elements
+Group    10 (    Prot-Masses) has  2077 elements
+Group    11 (    non-Protein) has 683746 elements
+Group    12 (            DNA) has  3501 elements
+Group    13 (             NA) has    88 elements
+Group    14 (          Water) has 680157 elements
+Group    15 (            SOL) has 680157 elements
+Group    16 (      non-Water) has  5666 elements
+Group    17 (            Ion) has    88 elements
+Group    18 ( Water_and_ions) has 680245 elements
+Group    19 (    Protein_DNA) has  5578 elements
+Select a group: 19
+Selected 19: 'Protein_DNA'
+Select group for output
+Group     0 (         System) has 685823 elements
+Group     1 (        Protein) has  2077 elements
+Group     2 (      Protein-H) has   981 elements
+Group     3 (        C-alpha) has   125 elements
+Group     4 (       Backbone) has   375 elements
+Group     5 (      MainChain) has   499 elements
+Group     6 (   MainChain+Cb) has   616 elements
+Group     7 (    MainChain+H) has   622 elements
+Group     8 (      SideChain) has  1455 elements
+Group     9 (    SideChain-H) has   482 elements
+Group    10 (    Prot-Masses) has  2077 elements
+Group    11 (    non-Protein) has 683746 elements
+Group    12 (            DNA) has  3501 elements
+Group    13 (             NA) has    88 elements
+Group    14 (          Water) has 680157 elements
+Group    15 (            SOL) has 680157 elements
+Group    16 (      non-Water) has  5666 elements
+Group    17 (            Ion) has    88 elements
+Group    18 ( Water_and_ions) has 680245 elements
+Group    19 (    Protein_DNA) has  5578 elements
+Select a group: 0
+Selected 0: 'System'
+Reading frame       0 time    0.000   
+Precision of md_1_20ns_center.xtc is 0.001 (nm)
+Using output precision of 0.001 (nm)
+Last frame       2000 time 20000.000    ->  frame   1999 time 19990.000      
+ ->  frame   2000 time 20000.000      
+Last written: frame   2000 time 20000.000
+
+
+GROMACS reminds you: "This is Tense !" (Star Wars Episode I The Phantom Menace)
+
+(gromacs) [alian@cn523 110nt-CXCL9]$ gmx trjconv -s md_1_20ns.tpr \
+>             -f md_1_20ns_center.xtc \
+>             -o start.pdb \
+>             -dump 0
+               :-) GROMACS - gmx trjconv, 2025.3-conda_forge (-:
+
+Executable:   /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs/bin.AVX2_256/gmx
+Data prefix:  /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs
+Working dir:  /hpf/projects/mkoziarski/alian/igem/Protein_DNA_MD/110nt-CXCL9
+Command line:
+  gmx trjconv -s md_1_20ns.tpr -f md_1_20ns_center.xtc -o start.pdb -dump 0
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Will write pdb: Protein data bank file
+Reading file md_1_20ns.tpr, VERSION 2025.3-conda_forge (single precision)
+Reading file md_1_20ns.tpr, VERSION 2025.3-conda_forge (single precision)
+Select group for output
+Group     0 (         System) has 685823 elements
+Group     1 (        Protein) has  2077 elements
+Group     2 (      Protein-H) has   981 elements
+Group     3 (        C-alpha) has   125 elements
+Group     4 (       Backbone) has   375 elements
+Group     5 (      MainChain) has   499 elements
+Group     6 (   MainChain+Cb) has   616 elements
+Group     7 (    MainChain+H) has   622 elements
+Group     8 (      SideChain) has  1455 elements
+Group     9 (    SideChain-H) has   482 elements
+Group    10 (    Prot-Masses) has  2077 elements
+Group    11 (    non-Protein) has 683746 elements
+Group    12 (            DNA) has  3501 elements
+Group    13 (             NA) has    88 elements
+Group    14 (          Water) has 680157 elements
+Group    15 (            SOL) has 680157 elements
+Group    16 (      non-Water) has  5666 elements
+Group    17 (            Ion) has    88 elements
+Group    18 ( Water_and_ions) has 680245 elements
+Select a group: 0
+Selected 0: 'System'
+Reading frame       0 time    0.000   
+Precision of md_1_20ns_center.xtc is 0.001 (nm)
+Reading frame       1 time   10.000   
+Dumping frame at t= 0 ps
+ ->  frame      0 time    0.000      
+Last written: frame      0 time    0.000
+
+
+GROMACS reminds you: "I don't believe in astrology; I'm a Sagittarian and we're skeptical." (Arthur C. Clarke)
