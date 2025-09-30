@@ -1,0 +1,1154 @@
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx pdb2gmx -f data/110nt_CXCL9_docked_fixed.pdb -o complex.gro -water tip3p -ter -ignh
+             :-) GROMACS - gmx pdb2gmx, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx pdb2gmx -f data/110nt_CXCL9_docked_fixed.pdb -o complex.gro -water tip3p -ter -ignh
+
+Select the Force Field:
+
+From current directory:
+
+ 1: CHARMM all-atom force field
+
+From '/cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/share/gromacs/top':
+
+ 2: AMBER03 protein, nucleic AMBER94 (Duan et al., J. Comp. Chem. 24, 1999-2012, 2003)
+
+ 3: AMBER94 force field (Cornell et al., JACS 117, 5179-5197, 1995)
+
+ 4: AMBER96 protein, nucleic AMBER94 (Kollman et al., Acc. Chem. Res. 29, 461-469, 1996)
+
+ 5: AMBER99 protein, nucleic AMBER94 (Wang et al., J. Comp. Chem. 21, 1049-1074, 2000)
+
+ 6: AMBER99SB protein, nucleic AMBER94 (Hornak et al., Proteins 65, 712-725, 2006)
+
+ 7: AMBER99SB-ILDN protein, nucleic AMBER94 (Lindorff-Larsen et al., Proteins 78, 1950-58, 2010)
+
+ 8: AMBERGS force field (Garcia & Sanbonmatsu, PNAS 99, 2782-2787, 2002)
+
+ 9: CHARMM27 all-atom force field (CHARM22 plus CMAP for proteins)
+
+10: GROMOS96 43a1 force field
+
+11: GROMOS96 43a2 force field (improved alkane dihedrals)
+
+12: GROMOS96 45a3 force field (Schuler JCC 2001 22 1205)
+
+13: GROMOS96 53a5 force field (JCC 2004 vol 25 pag 1656)
+
+14: GROMOS96 53a6 force field (JCC 2004 vol 25 pag 1656)
+
+15: GROMOS96 54a7 force field (Eur. Biophys. J. (2011), 40,, 843-856, DOI: 10.1007/s00249-011-0700-9)
+
+16: OPLS-AA/L all-atom force field (2001 aminoacid dihedrals)
+1
+
+Using the Charmm36-jul2022 force field in directory ./charmm36-jul2022.ff
+
+going to rename ./charmm36-jul2022.ff/aminoacids.r2b
+Opening force field file ./charmm36-jul2022.ff/aminoacids.r2b
+
+going to rename ./charmm36-jul2022.ff/carb.r2b
+Opening force field file ./charmm36-jul2022.ff/carb.r2b
+
+going to rename ./charmm36-jul2022.ff/cgenff.r2b
+Opening force field file ./charmm36-jul2022.ff/cgenff.r2b
+
+going to rename ./charmm36-jul2022.ff/ethers.r2b
+Opening force field file ./charmm36-jul2022.ff/ethers.r2b
+
+going to rename ./charmm36-jul2022.ff/lipid.r2b
+Opening force field file ./charmm36-jul2022.ff/lipid.r2b
+
+going to rename ./charmm36-jul2022.ff/metals.r2b
+Opening force field file ./charmm36-jul2022.ff/metals.r2b
+
+going to rename ./charmm36-jul2022.ff/na.r2b
+Opening force field file ./charmm36-jul2022.ff/na.r2b
+
+going to rename ./charmm36-jul2022.ff/silicates.r2b
+Opening force field file ./charmm36-jul2022.ff/silicates.r2b
+
+going to rename ./charmm36-jul2022.ff/solvent.r2b
+Opening force field file ./charmm36-jul2022.ff/solvent.r2b
+Reading data/110nt_CXCL9_docked_fixed.pdb...
+Read '', 3257 atoms
+
+Analyzing pdb file
+Splitting chemical chains based on TER records or chain id changing.
+
+There are 2 chains and 0 blocks of water and 235 residues with 3257 atoms
+
+  chain  #res #atoms
+
+  1 'A'   125    980  
+
+  2 'B'   110   2277  
+
+All occupancies are one
+All occupancies are one
+Opening force field file ./charmm36-jul2022.ff/atomtypes.atp
+
+Reading residue database... (Charmm36-jul2022)
+Opening force field file ./charmm36-jul2022.ff/aminoacids.rtp
+Opening force field file ./charmm36-jul2022.ff/carb.rtp
+Opening force field file ./charmm36-jul2022.ff/cgenff.rtp
+Opening force field file ./charmm36-jul2022.ff/ethers.rtp
+Opening force field file ./charmm36-jul2022.ff/lipid.rtp
+Opening force field file ./charmm36-jul2022.ff/metals.rtp
+Opening force field file ./charmm36-jul2022.ff/na.rtp
+Opening force field file ./charmm36-jul2022.ff/silicates.rtp
+Opening force field file ./charmm36-jul2022.ff/solvent.rtp
+Opening force field file ./charmm36-jul2022.ff/aminoacids.hdb
+Opening force field file ./charmm36-jul2022.ff/carb.hdb
+Opening force field file ./charmm36-jul2022.ff/cgenff.hdb
+Opening force field file ./charmm36-jul2022.ff/ethers.hdb
+Opening force field file ./charmm36-jul2022.ff/lipid.hdb
+Opening force field file ./charmm36-jul2022.ff/metals.hdb
+Opening force field file ./charmm36-jul2022.ff/na.hdb
+Opening force field file ./charmm36-jul2022.ff/silicates.hdb
+Opening force field file ./charmm36-jul2022.ff/solvent.hdb
+Opening force field file ./charmm36-jul2022.ff/aminoacids.n.tdb
+Opening force field file ./charmm36-jul2022.ff/carb.n.tdb
+Opening force field file ./charmm36-jul2022.ff/cgenff.n.tdb
+Opening force field file ./charmm36-jul2022.ff/ethers.n.tdb
+Opening force field file ./charmm36-jul2022.ff/lipid.n.tdb
+Opening force field file ./charmm36-jul2022.ff/metals.n.tdb
+Opening force field file ./charmm36-jul2022.ff/na.n.tdb
+Opening force field file ./charmm36-jul2022.ff/silicates.n.tdb
+Opening force field file ./charmm36-jul2022.ff/solvent.n.tdb
+Opening force field file ./charmm36-jul2022.ff/aminoacids.c.tdb
+Opening force field file ./charmm36-jul2022.ff/carb.c.tdb
+Opening force field file ./charmm36-jul2022.ff/cgenff.c.tdb
+Opening force field file ./charmm36-jul2022.ff/ethers.c.tdb
+Opening force field file ./charmm36-jul2022.ff/lipid.c.tdb
+Opening force field file ./charmm36-jul2022.ff/metals.c.tdb
+Opening force field file ./charmm36-jul2022.ff/na.c.tdb
+Opening force field file ./charmm36-jul2022.ff/silicates.c.tdb
+Opening force field file ./charmm36-jul2022.ff/solvent.c.tdb
+
+Processing chain 1 'A' (980 atoms, 125 residues)
+Analysing hydrogen-bonding network for automated assignment of histidine
+ protonation. 201 donors and 171 acceptors were found.
+There are 250 hydrogen bonds
+Will use HISE for residue 42
+Will use HISE for residue 105
+
+Identified residue MET1 as a starting terminus.
+
+Identified residue THR125 as a ending terminus.
+9 out of 9 lines of specbond.dat converted successfully
+Special Atom Distance matrix:
+                    MET1   CYS31   CYS33   HIS42   CYS58   CYS74
+                     SD7   SG230   SG242  NE2306   SG431   SG552
+   CYS31   SG230   4.785
+   CYS33   SG242   5.553   0.776
+   HIS42  NE2306   7.424   2.799   2.108
+   CYS58   SG431   4.922   0.285   0.735   2.728
+   CYS74   SG552   5.740   0.992   0.257   1.926   0.984
+  HIS105  NE2806   8.689   4.405   3.907   3.671   4.157   3.922
+Select start terminus type for MET-1
+ 0: MET1
+ 1: NH3+
+ 2: NH2
+ 3: HYD1
+ 4: 5TER
+ 5: 5MET
+ 6: 5PHO
+ 7: 5POM
+ 8: None
+1
+Start terminus MET-1: NH3+
+Select end terminus type for THR-125
+ 0: COO-
+ 1: COOH
+ 2: CT2
+ 3: CT1
+ 4: HYD2
+ 5: MET2
+ 6: 3TER
+ 7: None
+0
+End terminus THR-125: COO-
+Opening force field file ./charmm36-jul2022.ff/aminoacids.arn
+
+Checking for duplicate atoms....
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 125 residues with 2077 atoms
+Chain time...
+
+Making bonds...
+
+Number of bonds was 2086, now 2086
+
+Generating angles, dihedrals and pairs...
+Before cleaning: 5549 pairs
+Before cleaning: 5584 dihedrals
+
+Making cmap torsions...
+
+There are  123 cmap torsion pairs
+
+There are 5584 dihedrals,  343 impropers, 3831 angles
+          5540 pairs,     2086 bonds and     0 virtual sites
+
+Total mass 14041.073 a.m.u.
+
+Total charge 22.000 e
+
+Writing topology
+
+Processing chain 2 'B' (2277 atoms, 110 residues)
+
+Identified residue DC1 as a starting terminus.
+
+Identified residue DG110 as a ending terminus.
+9 out of 9 lines of specbond.dat converted successfully
+Select start terminus type for DC-1
+ 0: NH3+
+ 1: NH2
+ 2: HYD1
+ 3: MET1
+ 4: 5TER
+ 5: 5MET
+ 6: 5PHO
+ 7: 5POM
+ 8: None
+6
+Start terminus DC-1: 5PHO
+Select end terminus type for DG-110
+ 0: COO-
+ 1: COOH
+ 2: CT2
+ 3: CT1
+ 4: HYD2
+ 5: MET2
+ 6: 3TER
+ 7: None
+6
+End terminus DG-110: 3TER
+Opening force field file ./charmm36-jul2022.ff/aminoacids.arn
+
+Checking for duplicate atoms....
+
+Generating any missing hydrogen atoms and/or adding termini.
+
+Now there are 110 residues with 3501 atoms
+Chain time...
+
+Making bonds...
+
+Number of bonds was 3791, now 3791
+
+Generating angles, dihedrals and pairs...
+Before cleaning: 9105 pairs
+Before cleaning: 10010 dihedrals
+
+Making cmap torsions...
+
+There are 10010 dihedrals,  293 impropers, 6859 angles
+          8775 pairs,     3791 bonds and     0 virtual sites
+
+Total mass 34132.562 a.m.u.
+
+Total charge -110.000 e
+
+Writing topology
+
+Including chain 1 in system: 2077 atoms 125 residues
+
+Including chain 2 in system: 3501 atoms 110 residues
+
+Now there are 5578 atoms and 235 residues
+
+Total mass in system 48173.634 a.m.u.
+
+Total charge in system -88.000 e
+
+Writing coordinate file...
+
+                --------- PLEASE NOTE ------------
+
+You have successfully generated a topology from: data/110nt_CXCL9_docked_fixed.pdb.
+
+The Charmm36-jul2022 force field and the tip3p water model are used.
+
+                --------- ETON ESAELP ------------
+
+GROMACS reminds you: "I can't help but think the model is ungrateful for all that nice data I gave it. Jerk." (Kate Stafford)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx editconf -f complex.gro -o newbox.gro -bt dodecahedron -d 1.0
+             :-) GROMACS - gmx editconf, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx editconf -f complex.gro -o newbox.gro -bt dodecahedron -d 1.0
+
+Note that major changes are planned in future for editconf, to improve usability and utility.
+Read 5578 atoms
+Volume: 2528.69 nm^3, corresponds to roughly 1137900 electrons
+No velocities found
+    system size : 14.719 12.692 13.535 (nm)
+    diameter    : 19.450               (nm)
+    center      : -1.742 -1.606 -0.916 (nm)
+    box vectors : 14.719 12.693 13.535 (nm)
+    box angles  :  90.00  90.00  90.00 (degrees)
+    box volume  :2528.69               (nm^3)
+    shift       : 17.830 17.693  8.499 (nm)
+new center      : 16.088 16.088  7.584 (nm)
+new box vectors : 21.450 21.450 21.450 (nm)
+new box angles  :  60.00  60.00  90.00 (degrees)
+new box volume  :6978.65               (nm^3)
+
+GROMACS reminds you: "Wicky-wicky Wa-wild West" (Will Smith)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx solvate -cp newbox.gro -cs spc216.gro -p topol.top -o solv.gro
+             :-) GROMACS - gmx solvate, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx solvate -cp newbox.gro -cs spc216.gro -p topol.top -o solv.gro
+
+Reading solute configuration
+Reading solvent configuration
+
+Initialising inter-atomic distances...
+
+WARNING: Masses and atomic (Van der Waals) radii will be guessed
+         based on residue and atom names, since they could not be
+         definitively assigned from the information in your input
+         files. These guessed numbers might deviate from the mass
+         and radius of the atom type. Please check the output
+         files if necessary. Note, that this functionality may
+         be removed in a future GROMACS version. Please, consider
+         using another file format for your input.
+
+NOTE: From version 5.0 gmx solvate uses the Van der Waals radii
+from the source below. This means the results may be different
+compared to previous GROMACS versions.
+
+++++ PLEASE READ AND CITE THE FOLLOWING REFERENCE ++++
+A. Bondi
+van der Waals Volumes and Radii
+J. Phys. Chem. 68 (1964) pp. 441-451
+-------- -------- --- Thank You --- -------- --------
+
+Generating solvent configuration
+Will generate new solvent configuration of 12x12x9 boxes
+Solvent box contains 733209 atoms in 244403 residues
+Removed 46929 solvent atoms due to solvent-solvent overlap
+Removed 5859 solvent atoms due to solute-solvent overlap
+Sorting configuration
+Found 1 molecule type:
+    SOL (   3 atoms): 226807 residues
+Generated solvent containing 680421 atoms in 226807 residues
+Writing generated configuration to solv.gro
+
+Output configuration contains 685999 atoms in 227042 residues
+Volume                 :     6978.65 (nm^3)
+Density                :     984.079 (g/l)
+Number of solvent molecules:  226807   
+
+Processing topology
+Adding line for 226807 solvent molecules with resname (SOL) to topology file (topol.top)
+
+Back Off! I just backed up topol.top to ./#topol.top.1#
+
+GROMACS reminds you: "I Feel a Great Disturbance in the Force" (The Emperor Strikes Back)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx genion -s ions.tpr -o solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+              :-) GROMACS - gmx genion, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx genion -s ions.tpr -o solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+
+
+-------------------------------------------------------
+Program:     gmx genion, version 2024.4-EasyBuild_4.9.4
+Source file: src/gromacs/commandline/cmdlineparser.cpp (line 271)
+Function:    void gmx::CommandLineParser::parse(int*, char**)
+
+Error in user input:
+Invalid command-line options
+  In command-line option -s
+    File 'ions.tpr' does not exist or is not accessible.
+    The file could not be opened.
+      Reason: No such file or directory
+      (call to fopen() returned error code 2)
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx grompp -f ions.mdp -c solv.gro -p topol.top -o ions.tpr
+              :-) GROMACS - gmx grompp, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx grompp -f ions.mdp -c solv.gro -p topol.top -o ions.tpr
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'ns_type'
+
+NOTE 1 [file ions.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+Setting the LD random seed to 1894497535
+
+Generated 167799 of the 167910 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 1
+
+Generated 117432 of the 167910 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+Excluding 3 bonded neighbours molecule type 'DNA_chain_B'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+NOTE 2 [file topol.top, line 48]:
+  System has non-zero total charge: -88.000000
+  Total charge should normally be an integer. See
+  https://manual.gromacs.org/current/user-guide/floating-point.html
+  for discussion on how close it should be to an integer.
+
+
+
+Analysing residue names:
+There are:   125    Protein residues
+There are:   110        DNA residues
+There are: 226807      Water residues
+Analysing Protein...
+Number of degrees of freedom in T-Coupling group rest is 1377573.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+NOTE 3 [file ions.mdp]:
+  You are using a plain Coulomb cut-off, which might produce artifacts.
+  You might want to consider using PME electrostatics.
+
+
+
+This run will generate roughly 53 Mb of data
+
+There were 3 NOTEs
+
+GROMACS reminds you: "If You Touch Me, You'll Get Shocked" (Beastie Boys)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx genion -s ions.tpr -o solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+              :-) GROMACS - gmx genion, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx genion -s ions.tpr -o solv_ions.gro -p topol.top -pname NA -nname CL -neutral
+
+Reading file ions.tpr, VERSION 2024.4-EasyBuild_4.9.4 (single precision)
+Reading file ions.tpr, VERSION 2024.4-EasyBuild_4.9.4 (single precision)
+Will try to add 88 NA ions and 0 CL ions.
+Select a continuous group of solvent molecules
+Group     0 (         System) has 685999 elements
+Group     1 (        Protein) has  2077 elements
+Group     2 (      Protein-H) has   981 elements
+Group     3 (        C-alpha) has   125 elements
+Group     4 (       Backbone) has   375 elements
+Group     5 (      MainChain) has   499 elements
+Group     6 (   MainChain+Cb) has   616 elements
+Group     7 (    MainChain+H) has   622 elements
+Group     8 (      SideChain) has  1455 elements
+Group     9 (    SideChain-H) has   482 elements
+Group    10 (    Prot-Masses) has  2077 elements
+Group    11 (    non-Protein) has 683922 elements
+Group    12 (            DNA) has  3501 elements
+Group    13 (          Water) has 680421 elements
+Group    14 (            SOL) has 680421 elements
+Group    15 (      non-Water) has  5578 elements
+Select a group: 14
+Selected 14: 'SOL'
+Number of (3-atomic) solvent molecules: 226807
+
+Processing topology
+Replacing 88 solute molecules in topology file (topol.top)  by 88 NA and 0 CL ions.
+
+Back Off! I just backed up topol.top to ./#topol.top.2#
+Using random seed -37792053.
+Replacing solvent molecule 200607 (atom 607399) with NA
+Replacing solvent molecule 143917 (atom 437329) with NA
+Replacing solvent molecule 109343 (atom 333607) with NA
+Replacing solvent molecule 111257 (atom 339349) with NA
+Replacing solvent molecule 196821 (atom 596041) with NA
+Replacing solvent molecule 114520 (atom 349138) with NA
+Replacing solvent molecule 79708 (atom 244702) with NA
+Replacing solvent molecule 76853 (atom 236137) with NA
+Replacing solvent molecule 161401 (atom 489781) with NA
+Replacing solvent molecule 52784 (atom 163930) with NA
+Replacing solvent molecule 83804 (atom 256990) with NA
+Replacing solvent molecule 46564 (atom 145270) with NA
+Replacing solvent molecule 64710 (atom 199708) with NA
+Replacing solvent molecule 68518 (atom 211132) with NA
+Replacing solvent molecule 38055 (atom 119743) with NA
+Replacing solvent molecule 197452 (atom 597934) with NA
+Replacing solvent molecule 27837 (atom 89089) with NA
+Replacing solvent molecule 88514 (atom 271120) with NA
+Replacing solvent molecule 4043 (atom 17707) with NA
+Replacing solvent molecule 139557 (atom 424249) with NA
+Replacing solvent molecule 10475 (atom 37003) with NA
+Replacing solvent molecule 45261 (atom 141361) with NA
+Replacing solvent molecule 72994 (atom 224560) with NA
+Replacing solvent molecule 65069 (atom 200785) with NA
+Replacing solvent molecule 176773 (atom 535897) with NA
+Replacing solvent molecule 125660 (atom 382558) with NA
+Replacing solvent molecule 71877 (atom 221209) with NA
+Replacing solvent molecule 107503 (atom 328087) with NA
+Replacing solvent molecule 31025 (atom 98653) with NA
+Replacing solvent molecule 160519 (atom 487135) with NA
+Replacing solvent molecule 12556 (atom 43246) with NA
+Replacing solvent molecule 12738 (atom 43792) with NA
+Replacing solvent molecule 225067 (atom 680779) with NA
+Replacing solvent molecule 200801 (atom 607981) with NA
+Replacing solvent molecule 155306 (atom 471496) with NA
+Replacing solvent molecule 27008 (atom 86602) with NA
+Replacing solvent molecule 141150 (atom 429028) with NA
+Replacing solvent molecule 80002 (atom 245584) with NA
+Replacing solvent molecule 18359 (atom 60655) with NA
+Replacing solvent molecule 215381 (atom 651721) with NA
+Replacing solvent molecule 37429 (atom 117865) with NA
+Replacing solvent molecule 22814 (atom 74020) with NA
+Replacing solvent molecule 138101 (atom 419881) with NA
+Replacing solvent molecule 207274 (atom 627400) with NA
+Replacing solvent molecule 91210 (atom 279208) with NA
+Replacing solvent molecule 6834 (atom 26080) with NA
+Replacing solvent molecule 150244 (atom 456310) with NA
+Replacing solvent molecule 82399 (atom 252775) with NA
+Replacing solvent molecule 71095 (atom 218863) with NA
+Replacing solvent molecule 226804 (atom 685990) with NA
+Replacing solvent molecule 21654 (atom 70540) with NA
+Replacing solvent molecule 35256 (atom 111346) with NA
+Replacing solvent molecule 177904 (atom 539290) with NA
+Replacing solvent molecule 188118 (atom 569932) with NA
+Replacing solvent molecule 57432 (atom 177874) with NA
+Replacing solvent molecule 173892 (atom 527254) with NA
+Replacing solvent molecule 12824 (atom 44050) with NA
+Replacing solvent molecule 224770 (atom 679888) with NA
+Replacing solvent molecule 66531 (atom 205171) with NA
+Replacing solvent molecule 224794 (atom 679960) with NA
+Replacing solvent molecule 41232 (atom 129274) with NA
+Replacing solvent molecule 160836 (atom 488086) with NA
+Replacing solvent molecule 165414 (atom 501820) with NA
+Replacing solvent molecule 58733 (atom 181777) with NA
+Replacing solvent molecule 63045 (atom 194713) with NA
+Replacing solvent molecule 7726 (atom 28756) with NA
+Replacing solvent molecule 165408 (atom 501802) with NA
+Replacing solvent molecule 60940 (atom 188398) with NA
+Replacing solvent molecule 54207 (atom 168199) with NA
+Replacing solvent molecule 156305 (atom 474493) with NA
+Replacing solvent molecule 774 (atom 7900) with NA
+Replacing solvent molecule 145713 (atom 442717) with NA
+Replacing solvent molecule 203831 (atom 617071) with NA
+Replacing solvent molecule 94030 (atom 287668) with NA
+Replacing solvent molecule 186603 (atom 565387) with NA
+Replacing solvent molecule 162933 (atom 494377) with NA
+Replacing solvent molecule 48918 (atom 152332) with NA
+Replacing solvent molecule 59363 (atom 183667) with NA
+Replacing solvent molecule 100888 (atom 308242) with NA
+Replacing solvent molecule 130766 (atom 397876) with NA
+Replacing solvent molecule 56388 (atom 174742) with NA
+Replacing solvent molecule 116353 (atom 354637) with NA
+Replacing solvent molecule 102520 (atom 313138) with NA
+Replacing solvent molecule 53525 (atom 166153) with NA
+Replacing solvent molecule 103996 (atom 317566) with NA
+Replacing solvent molecule 99517 (atom 304129) with NA
+Replacing solvent molecule 137859 (atom 419155) with NA
+Replacing solvent molecule 161370 (atom 489688) with NA
+
+
+GROMACS reminds you: "Three Little Fonzies" (Pulp Fiction)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx grompp -f em.mdp -c solv_ions.gro -p topol.top -o em.tpr
+              :-) GROMACS - gmx grompp, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx grompp -f em.mdp -c solv_ions.gro -p topol.top -o em.tpr
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'ns_type'
+
+NOTE 1 [file em.mdp]:
+  With Verlet lists the optimal nstlist is >= 10, with GPUs >= 20. Note
+  that with the Verlet scheme, nstlist has no effect on the accuracy of
+  your simulation.
+
+Setting the LD random seed to -1074037441
+
+Generated 167799 of the 167910 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 1
+
+Generated 117432 of the 167910 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+Excluding 3 bonded neighbours molecule type 'DNA_chain_B'
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+Excluding 3 bonded neighbours molecule type 'NA'
+Analysing residue names:
+There are:   125    Protein residues
+There are:   110        DNA residues
+There are: 226719      Water residues
+There are:    88        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+Number of degrees of freedom in T-Coupling group rest is 1377309.00
+The integrator does not provide a ensemble temperature, there is no system ensemble temperature
+
+The largest distance between excluded atoms is 0.439 nm between atom 3873 and 3898
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 192x192x192, spacing 0.112 0.112 0.112
+
+Estimate for the relative computational load of the PME mesh part: 0.28
+
+This run will generate roughly 52 Mb of data
+
+There was 1 NOTE
+
+GROMACS reminds you: "Some People Say Not to Worry About the Air" (The Talking Heads)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ sbatch em.sh
+Submitted batch job 2261042
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ 
+
+
+########################################################
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx make_ndx -f em.gro -o index_dna.ndx
+             :-) GROMACS - gmx make_ndx, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx make_ndx -f em.gro -o index_dna.ndx
+
+
+Reading structure file
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:   125    Protein residues
+There are:   110        DNA residues
+There are: 226719      Water residues
+There are:    88        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+  0 System              : 685823 atoms
+  1 Protein             :  2077 atoms
+  2 Protein-H           :   981 atoms
+  3 C-alpha             :   125 atoms
+  4 Backbone            :   375 atoms
+  5 MainChain           :   499 atoms
+  6 MainChain+Cb        :   616 atoms
+  7 MainChain+H         :   622 atoms
+  8 SideChain           :  1455 atoms
+  9 SideChain-H         :   482 atoms
+ 10 Prot-Masses         :  2077 atoms
+ 11 non-Protein         : 683746 atoms
+ 12 DNA                 :  3501 atoms
+ 13 NA                  :    88 atoms
+ 14 Water               : 680157 atoms
+ 15 SOL                 : 680157 atoms
+ 16 non-Water           :  5666 atoms
+ 17 Ion                 :    88 atoms
+ 18 Water_and_ions      : 680245 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 12 & ! a H*
+
+Copied index group 12 'DNA'
+Found 455757 atoms with name H*
+q
+^C
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx make_ndx -f em.gro -o index_dna.ndx
+             :-) GROMACS - gmx make_ndx, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx make_ndx -f em.gro -o index_dna.ndx
+
+
+Reading structure file
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:   125    Protein residues
+There are:   110        DNA residues
+There are: 226719      Water residues
+There are:    88        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+  0 System              : 685823 atoms
+  1 Protein             :  2077 atoms
+  2 Protein-H           :   981 atoms
+  3 C-alpha             :   125 atoms
+  4 Backbone            :   375 atoms
+  5 MainChain           :   499 atoms
+  6 MainChain+Cb        :   616 atoms
+  7 MainChain+H         :   622 atoms
+  8 SideChain           :  1455 atoms
+  9 SideChain-H         :   482 atoms
+ 10 Prot-Masses         :  2077 atoms
+ 11 non-Protein         : 683746 atoms
+ 12 DNA                 :  3501 atoms
+ 13 NA                  :    88 atoms
+ 14 Water               : 680157 atoms
+ 15 SOL                 : 680157 atoms
+ 16 non-Water           :  5666 atoms
+ 17 Ion                 :    88 atoms
+ 18 Water_and_ions      : 680245 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 12 & ! a H*           
+
+Copied index group 12 'DNA'
+Found 455757 atoms with name H*
+Complemented group: 230066 atoms
+Merged two groups with AND: 3501 230066 -> 2278
+
+> q
+
+
+GROMACS reminds you: "I Need a Little Poison" (Throwing Muses)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx genrestr -f em.gro -n index_dna.ndx -o posre_DNA_chain_B.itp -fc 1000 1000 1000
+             :-) GROMACS - gmx genrestr, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx genrestr -f em.gro -n index_dna.ndx -o posre_DNA_chain_B.itp -fc 1000 1000 1000
+
+
+Reading structure file
+Select group to position restrain
+Group     0 (         System) has 685823 elements
+Group     1 (        Protein) has  2077 elements
+Group     2 (      Protein-H) has   981 elements
+Group     3 (        C-alpha) has   125 elements
+Group     4 (       Backbone) has   375 elements
+Group     5 (      MainChain) has   499 elements
+Group     6 (   MainChain+Cb) has   616 elements
+Group     7 (    MainChain+H) has   622 elements
+Group     8 (      SideChain) has  1455 elements
+Group     9 (    SideChain-H) has   482 elements
+Group    10 (    Prot-Masses) has  2077 elements
+Group    11 (    non-Protein) has 683746 elements
+Group    12 (            DNA) has  3501 elements
+Group    13 (             NA) has    88 elements
+Group    14 (          Water) has 680157 elements
+Group    15 (            SOL) has 680157 elements
+Group    16 (      non-Water) has  5666 elements
+Group    17 (            Ion) has    88 elements
+Group    18 ( Water_and_ions) has 680245 elements
+Group    19 (      DNA_&_!H*) has  2278 elements
+Select a group: 19
+Selected 19: 'DNA_&_!H*'
+
+Back Off! I just backed up posre_DNA_chain_B.itp to ./#posre_DNA_chain_B.itp.1#
+
+GROMACS reminds you: "Trying is the first step towards failure." (Homer Simpson)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx make_ndx -f em.gro -o prot_dna_index.ndx
+             :-) GROMACS - gmx make_ndx, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx make_ndx -f em.gro -o prot_dna_index.ndx
+
+
+Reading structure file
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:   125    Protein residues
+There are:   110        DNA residues
+There are: 226719      Water residues
+There are:    88        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+  0 System              : 685823 atoms
+  1 Protein             :  2077 atoms
+  2 Protein-H           :   981 atoms
+  3 C-alpha             :   125 atoms
+  4 Backbone            :   375 atoms
+  5 MainChain           :   499 atoms
+  6 MainChain+Cb        :   616 atoms
+  7 MainChain+H         :   622 atoms
+  8 SideChain           :  1455 atoms
+  9 SideChain-H         :   482 atoms
+ 10 Prot-Masses         :  2077 atoms
+ 11 non-Protein         : 683746 atoms
+ 12 DNA                 :  3501 atoms
+ 13 NA                  :    88 atoms
+ 14 Water               : 680157 atoms
+ 15 SOL                 : 680157 atoms
+ 16 non-Water           :  5666 atoms
+ 17 Ion                 :    88 atoms
+ 18 Water_and_ions      : 680245 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 1 | 12
+
+Copied index group 1 'Protein'
+Copied index group 12 'DNA'
+Merged two groups with OR: 2077 3501 -> 5578
+
+> name 19 Protein_DNA
+
+
+> q
+
+
+GROMACS reminds you: "Life would be tragic if it weren't funny." (Stephen Hawking)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx grompp -f nvt.mdp -c em.gro  -r em.gro  -p topol.top -n prot_dna_index.ndx -o nvt.tpr
+              :-) GROMACS - gmx grompp, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -n prot_dna_index.ndx -o nvt.tpr
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'ns_type'
+Setting the LD random seed to -9044641
+
+Generated 167799 of the 167910 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 1
+
+Generated 117432 of the 167910 1-4 parameter combinations
+
+ERROR 1 [file posre_DNA_chain_B.itp, line 938]:
+  Atom index (3502) in position_restraints out of bounds (1-3501).
+  This probably means that you have inserted topology section
+  "position_restraints"
+  in a part belonging to a different molecule than you intended to.
+  In that case move the "position_restraints" section to the right
+  molecule.
+
+
+-------------------------------------------------------
+Program:     gmx grompp, version 2024.4-EasyBuild_4.9.4
+Source file: src/gromacs/gmxpreprocess/toppush.cpp (line 1943)
+
+Fatal error:
+There was 1 error in input file(s)
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx make_ndx -f em.gro -o prot_dna_index.ndx
+             :-) GROMACS - gmx make_ndx, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx make_ndx -f em.gro -o prot_dna_index.ndx
+
+
+Reading structure file
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:   125    Protein residues
+There are:   110        DNA residues
+There are: 226719      Water residues
+There are:    88        Ion residues
+Analysing Protein...
+Analysing residues not classified as Protein/DNA/RNA/Water and splitting into groups...
+
+  0 System              : 685823 atoms
+  1 Protein             :  2077 atoms
+  2 Protein-H           :   981 atoms
+  3 C-alpha             :   125 atoms
+  4 Backbone            :   375 atoms
+  5 MainChain           :   499 atoms
+  6 MainChain+Cb        :   616 atoms
+  7 MainChain+H         :   622 atoms
+  8 SideChain           :  1455 atoms
+  9 SideChain-H         :   482 atoms
+ 10 Prot-Masses         :  2077 atoms
+ 11 non-Protein         : 683746 atoms
+ 12 DNA                 :  3501 atoms
+ 13 NA                  :    88 atoms
+ 14 Water               : 680157 atoms
+ 15 SOL                 : 680157 atoms
+ 16 non-Water           :  5666 atoms
+ 17 Ion                 :    88 atoms
+ 18 Water_and_ions      : 680245 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> q^[^C
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx trjconv -s em.tpr -f em.gro -o dna_only.gro -n prot_dna_index.ndx -dump 0
+             :-) GROMACS - gmx trjconv, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx trjconv -s em.tpr -f em.gro -o dna_only.gro -n prot_dna_index.ndx -dump 0
+
+Note that major changes are planned in future for trjconv, to improve usability and utility.
+Will write gro: Coordinate file in Gromos-87 format
+Reading file em.tpr, VERSION 2024.4-EasyBuild_4.9.4 (single precision)
+Reading file em.tpr, VERSION 2024.4-EasyBuild_4.9.4 (single precision)
+Select group for output
+Group     0 (         System) has 685823 elements
+Group     1 (        Protein) has  2077 elements
+Group     2 (      Protein-H) has   981 elements
+Group     3 (        C-alpha) has   125 elements
+Group     4 (       Backbone) has   375 elements
+Group     5 (      MainChain) has   499 elements
+Group     6 (   MainChain+Cb) has   616 elements
+Group     7 (    MainChain+H) has   622 elements
+Group     8 (      SideChain) has  1455 elements
+Group     9 (    SideChain-H) has   482 elements
+Group    10 (    Prot-Masses) has  2077 elements
+Group    11 (    non-Protein) has 683746 elements
+Group    12 (            DNA) has  3501 elements
+Group    13 (             NA) has    88 elements
+Group    14 (          Water) has 680157 elements
+Group    15 (            SOL) has 680157 elements
+Group    16 (      non-Water) has  5666 elements
+Group    17 (            Ion) has    88 elements
+Group    18 ( Water_and_ions) has 680245 elements
+Group    19 (    Protein_DNA) has  5578 elements
+Select a group: 12
+Selected 12: 'DNA'
+Reading frames from gro file 'Protein in water', 685823 atoms.
+Reading frame       0 time    0.000   
+Precision of em.gro is 0.001 (nm)
+Last frame          0 time    0.000   
+
+Dumping frame at t= 0 ps
+ ->  frame      0 time    0.000      
+Last written: frame      0 time    0.000
+
+
+GROMACS reminds you: "People who do QM/MM must be rather patient and enjoy quality over speed" (Kresten Lindorff-Larsen)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx make_ndx -f dna_only.gro -o dna_index.ndx
+             :-) GROMACS - gmx make_ndx, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx make_ndx -f dna_only.gro -o dna_index.ndx
+
+
+Reading structure file
+Going to read 0 old index file(s)
+Analysing residue names:
+There are:   110        DNA residues
+
+  0 System              :  3501 atoms
+  1 DNA                 :  3501 atoms
+
+ nr : group      '!': not  'name' nr name   'splitch' nr    Enter: list groups
+ 'a': atom       '&': and  'del' nr         'splitres' nr   'l': list residues
+ 't': atom type  '|': or   'keep' nr        'splitat' nr    'h': help
+ 'r': residue              'res' nr         'chain' char
+ "name": group             'case': case sensitive           'q': save and quit
+ 'ri': residue index
+
+> 0 & ! a H* 
+
+Copied index group 0 'System'
+Found 1223 atoms with name H*
+Complemented group: 2278 atoms
+Merged two groups with AND: 3501 2278 -> 2278
+
+> name 1 DNA_heavy
+
+
+> q
+
+
+GROMACS reminds you: "Ease Myself Into the Body Bag" (P.J. Harvey)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx genrestr -f dna_only.gro -n dna_index.ndx -o posre_isolated_DNA_chain_B.itp -fc 1000 1000 1000
+             :-) GROMACS - gmx genrestr, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx genrestr -f dna_only.gro -n dna_index.ndx -o posre_isolated_DNA_chain_B.itp -fc 1000 1000 1000
+
+
+Reading structure file
+Select group to position restrain
+Group     0 (         System) has  3501 elements
+Group     1 (      DNA_heavy) has  3501 elements
+Group     2 (   System_&_!H*) has  2278 elements
+Select a group: 1
+Selected 1: 'DNA_heavy'
+
+GROMACS reminds you: "We ignore public understanding of science at our peril." (Eugenie Clark)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ tail -n +1 posre_DNA_chain_B.itp | awk '$1 ~ /^[0-9]+$/ {if($1>max) max=$1} END{print "max index:", max}'
+max index: 5577
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ tail -n +1 posre_isolated_DNA_chain_B.itp | awk '$1 ~ /^[0-9]+$/ {if($1>max) max=$1} END{print "max index:", max}'
+max index: 3501
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx grompp -f nvt.mdp -c em.gro  -r em.gro  -p topol.top -n prot_dna_index.ndx -o nvt.tpr
+              :-) GROMACS - gmx grompp, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -n prot_dna_index.ndx -o nvt.tpr
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'ns_type'
+Setting the LD random seed to -270304257
+
+Generated 167799 of the 167910 non-bonded parameter combinations
+Generating 1-4 interactions: fudge = 1
+
+Generated 117432 of the 167910 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'DNA_chain_B'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Setting gen_seed to 2130574825
+
+Velocities were taken from a Maxwell distribution at 300 K
+
+NOTE 1 [file topol.top, line 59]:
+  The bond in molecule-type DNA_chain_B between atoms 978 C2 and 979 O2 has
+  an estimated oscillational period of 1.9e-02 ps, which is less than 10
+  times the time step of 2.0e-03 ps.
+  Maybe you forgot to change the constraints mdp option.
+
+Number of degrees of freedom in T-Coupling group Protein_DNA is 14414.97
+Number of degrees of freedom in T-Coupling group Water_and_ions is 1360575.00
+
+The largest distance between excluded atoms is 0.421 nm between atom 5 and 13
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.297 nm, buffer size 0.097 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.225 nm, buffer size 0.025 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+
+NOTE 2 [file nvt.mdp]:
+  Removing center of mass motion in the presence of position restraints
+  might cause artifacts. When you are using position restraints to
+  equilibrate a macro-molecule, the artifacts are usually negligible.
+
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 144x144x144, spacing 0.149 0.149 0.149
+
+Estimate for the relative computational load of the PME mesh part: 0.21
+
+This run will generate roughly 383 Mb of data
+
+There were 2 NOTEs
+
+GROMACS reminds you: "A Man Needs a Maid" (N. Young)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ gmx mdrun -deffnm nvt
+              :-) GROMACS - gmx mdrun, 2024.4-EasyBuild_4.9.4 (-:
+
+Executable:   /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4/bin/gmx
+Data prefix:  /cvmfs/soft.computecanada.ca/easybuild/software/2023/x86-64-v4/MPI/gcc12/openmpi4/gromacs/2024.4
+Working dir:  /home/tanm27/andrew/md/110nt-CXCL9
+Command line:
+  gmx mdrun -deffnm nvt
+
+Reading file nvt.tpr, VERSION 2024.4-EasyBuild_4.9.4 (single precision)
+Changing nstlist from 20 to 80, rlist from 1.225 to 1.325
+
+Using 1 MPI thread
+Using 8 OpenMP threads 
+
+starting mdrun 'Protein in water'
+50000 steps,    100.0 ps.
+^C
+
+Received the INT signal, stopping within 80 steps
+
+
+               Core t (s)   Wall t (s)        (%)
+       Time:       43.441        5.433      799.6
+                 (ns/day)    (hour/ns)
+Performance:        2.576        9.315
+
+GROMACS reminds you: "What's Your Definition Of Dirty ?" (G. Michael)
+
+(vscode) [tanm27@c170.nibi 110nt-CXCL9]$ sbatch nvt.sh 
+Submitted batch job 2268956
