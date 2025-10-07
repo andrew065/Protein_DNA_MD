@@ -99,8 +99,3 @@ This protocol is part of McMaster iGEM's REACT 2025 project. For questions or co
 - Box type: Dodecahedron
 - Water model: TIP3P
 - Force field: CHARMM36
-
----
-
-**Last Updated**: January 2025  
-**Maintained by**: McMaster iGEM REACT 2025 Team
