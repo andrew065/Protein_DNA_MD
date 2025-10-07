@@ -1,17 +1,4 @@
 # Protein-DNA Molecular Dynamics Simulation Protocol
-
-A comprehensive GROMACS-based workflow for performing molecular dynamics (MD) simulations on protein-DNA complexes. This protocol was developed for McMaster iGEM's REACT 2025 project focusing on CXCL9 protein-DNA aptamer interactions.
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Directory Structure](#directory-structure)
-- [Analysis](#analysis)
-- [HPC Batch Jobs](#hpc-batch-jobs)
-- [References](#references)
-
 ## Overview
 
 This repository contains a complete MD simulation pipeline for studying protein-DNA interactions using the GROMACS molecular dynamics package with the CHARMM36 force field. 
