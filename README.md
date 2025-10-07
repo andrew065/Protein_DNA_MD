@@ -60,26 +60,12 @@ conda env create -f environment.yml
 conda activate gromacs
 ```
 
-### Option 2: Manual Installation
-
-1. Install GROMACS with CUDA support:
-```bash
-wget http://ftp.gromacs.org/pub/gromacs/gromacs-2023.3.tar.gz
-tar xfz gromacs-2023.3.tar.gz
-cd gromacs-2023.3
-mkdir build && cd build
-cmake .. -DGMX_BUILD_OWN_FFTW=ON -DGMX_MPI=on -DGMX_GPU=CUDA
-make -j 8
-sudo make install
-source /usr/local/gromacs/bin/GMXRC
-```
-
-2. Install Python dependencies:
+3. Install Python dependencies:
 ```bash
 pip install numpy scipy pandas matplotlib gmx_MMPBSA
 ```
 
-3. Download CHARMM36 force field and place in your working directory.
+4. Download CHARMM36 force field and place in your working directory.
 
 
 ## References
