@@ -1,0 +1,117 @@
+--------------------
+Job started on Thu Oct  2 14:19:26 EDT 2025
+--------------------
+                :-) GROMACS - gmx grompp, 2025.3-conda_forge (-:
+
+Executable:   /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs/bin.AVX2_256/gmx
+Data prefix:  /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs
+Working dir:  /hpf/projects/mkoziarski/alian/igem/Protein_DNA_MD/104nt-CXCL9
+Command line:
+  gmx grompp -f nvt.mdp -c em.gro -r em.gro -p topol.top -n prot_dna_index.ndx -o nvt.tpr
+
+Ignoring obsolete mdp entry 'title'
+Ignoring obsolete mdp entry 'ns_type'
+Generating 1-4 interactions: fudge = 1
+
+WARNING 1 [file topol.top, line 49]:
+  The following macros were defined in the 'define' mdp field with the -D
+  prefix, but were not used in the topology:
+      POSRES_PROT
+      POSRES_DNA
+  If you haven't made a spelling error, either use the macro you defined,
+  or don't define the macro
+
+
+NOTE 1 [file topol.top, line 49]:
+  The bond in molecule-type DNA_chain_B between atoms 978 C2 and 979 O2 has
+  an estimated oscillational period of 1.9e-02 ps, which is less than 10
+  times the time step of 2.0e-03 ps.
+  Maybe you forgot to change the constraints mdp option.
+
+Number of degrees of freedom in T-Coupling group Protein_DNA is 13899.99
+Number of degrees of freedom in T-Coupling group Water_and_ions is 3446667.00
+
+There was 1 NOTE
+
+There was 1 WARNING
+
+-------------------------------------------------------
+Program:     gmx grompp, version 2025.3-conda_forge
+Source file: src/gromacs/gmxpreprocess/grompp.cpp (line 2898)
+
+Fatal error:
+Too many warnings (1).
+If you are sure all warnings are harmless, use the -maxwarn option.
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------
+Setting the LD random seed to 2009069418
+
+Generated 167799 of the 167910 non-bonded parameter combinations
+
+Generated 117432 of the 167910 1-4 parameter combinations
+
+Excluding 3 bonded neighbours molecule type 'Protein_chain_A'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'DNA_chain_B'
+
+turning H bonds into constraints...
+
+Excluding 2 bonded neighbours molecule type 'SOL'
+
+turning H bonds into constraints...
+
+Excluding 3 bonded neighbours molecule type 'NA'
+
+turning H bonds into constraints...
+
+Setting gen_seed to -71635613
+
+Velocities were taken from a Maxwell distribution at 300 K
+
+The largest distance between excluded atoms is 0.423 nm between atom 5 and 13
+
+Determining Verlet buffer for a tolerance of 0.005 kJ/mol/ps at 300 K
+
+Calculated rlist for 1x1 atom pair-list as 1.296 nm, buffer size 0.096 nm
+
+Set rlist, assuming 4x4 atom pair-list, to 1.225 nm, buffer size 0.025 nm
+
+Note that mdrun will redetermine rlist based on the actual pair-list setup
+Calculating fourier grid dimensions for X Y Z
+Using a fourier grid of 192x192x192, spacing 0.152 0.152 0.152
+
+Estimate for the relative computational load of the PME mesh part: 0.16
+
+This run will generate roughly 965 Mb of data
+                :-) GROMACS - gmx mdrun, 2025.3-conda_forge (-:
+
+Executable:   /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs/bin.AVX2_256/gmx
+Data prefix:  /hpf/projects/mkoziarski/alian/miniconda3/envs/gromacs
+Working dir:  /hpf/projects/mkoziarski/alian/igem/Protein_DNA_MD/104nt-CXCL9
+Command line:
+  gmx mdrun -v -deffnm nvt
+
+
+-------------------------------------------------------
+Program:     gmx mdrun, version 2025.3-conda_forge
+Source file: src/gromacs/options/options.cpp (line 184)
+Function:    void gmx::internal::OptionSectionImpl::finish()
+
+Error in user input:
+Invalid input values
+  In option s
+    Required option was not provided, and the default file 'topol' does not
+    exist or is not accessible.
+    The following extensions were tried to complete the file name:
+      .tpr
+
+For more information and tips for troubleshooting, please check the GROMACS
+website at https://manual.gromacs.org/current/user-guide/run-time-errors.html
+-------------------------------------------------------
+--------------------
+Job ended on Thu Oct  2 14:19:47 EDT 2025
+--------------------

@@ -1,0 +1,32 @@
+name: gromacs
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  # Core MD Software
+  - gromacs==2025.3=nompi_cuda_h7ac747b_0
+  - ambertools=23.6
+  - python=3.11
+  
+  # CUDA Toolkit (installed via conda)
+  - cuda-toolkit=12.6.3
+  - cuda-version=12.6
+  
+  # Compilers
+  - gcc=13.4.0
+  - gxx=13.4.0
+  
+  # Scientific Computing
+  - numpy=1.26.4
+  - scipy=1.16.2
+  - pandas=2.3.3
+  
+  # Pip-only packages
+  - pip:
+      - gmx-mmpbsa==1.6.4
+      - pyqt6==6.9.1
+      - seaborn==0.13.2
+      - matplotlib==3.10.6
+      - tqdm==4.67.1
+      
