@@ -55,6 +55,39 @@ pip install numpy scipy pandas matplotlib gmx_MMPBSA
 4. Download CHARMM36 force field and place in your working directory.
 
 
+### Option 2: Running the Notebook on DRAC with a Python venv
+
+Use this option on DRAC systems where GROMACS is already provided as an HPC module. In this setup, use a Python virtual environment for the notebook and load GROMACS with `module load`; do not install or activate the conda environment.
+
+1. Clone the repository and create a Python virtual environment:
+```bash
+git clone https://github.com/andrew065/Protein_DNA_MD.git
+cd Protein_DNA_MD
+python -m venv .venv
+source .venv/bin/activate
+```
+
+2. Install the notebook Python dependencies into the venv:
+```bash
+pip install numpy scipy pandas matplotlib gmx_MMPBSA jupyter ipykernel
+python -m ipykernel install --user --name protein-dna-md --display-name "Protein-DNA MD (venv)"
+```
+
+3. Load the DRAC GROMACS module before running the notebook or submitting jobs. The Slurm scripts in this repository use the same pattern with a simple `module load ...` line:
+```bash
+module load gromacs/2024.4
+jupyter lab notebooks/protein_dna_md_tutorial.ipynb
+```
+
+4. If you submit the included Slurm scripts on DRAC, make sure the GROMACS module line is active and comment out the conda-specific setup lines:
+```bash
+module load gromacs/2024.4
+# source $HOME/.bashrc
+# conda activate gromacs
+```
+
+The `source $HOME/.bashrc` and `conda activate gromacs` lines are only needed for the conda environment workflow. For DRAC venv usage, keep the venv activation for notebook dependencies and rely on the loaded GROMACS module for `gmx` commands.
+
 ## References
 
 ### Resources
