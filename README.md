@@ -65,7 +65,6 @@ git clone https://github.com/andrew065/Protein_DNA_MD.git
 cd Protein_DNA_MD
 python -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
 ```
 
 2. Install the notebook Python dependencies into the venv:
